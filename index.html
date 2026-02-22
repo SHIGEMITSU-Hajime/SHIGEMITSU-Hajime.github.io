@@ -134,6 +134,34 @@ h2{
   font-size:12px;
   margin-bottom:4px;
 }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  margin-top:18px;
+  text-align:left;
+}
+.card{
+  background:#12151b;
+  border:1px solid #222;
+  border-radius:18px;
+  padding:16px;
+  transition:transform .2s,border-color .2s;
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(212,175,55,0.45);
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:16px;
+}
+.card p{
+  margin:0;
+  color:#b8c0cc;
+  font-size:14px;
+}
+  
 footer{
   padding:28px 0 40px;
   color:var(--muted);
@@ -172,10 +200,6 @@ footer{
     Integrating supramolecular chemistry, photomedicine, and autonomous materials discovery.
   </p>
 
-  <div class="hero">
-    <img src="assets/hero.png" alt="Research overview figure">
-    <p class="small">Research overview figure</p>
-  </div>
 </header>
 
 <section class="wrap">
@@ -191,11 +215,91 @@ footer{
 </section>
 
 <section class="wrap">
-  <h2>Contact</h2>
-  <p>
-    National Institute for Materials Science (NIMS), Japan<br>
-    Email: <a href="mailto:SHIGEMITSU.Hajime@nims.go.jp">SHIGEMITSU.Hajime@nims.go.jp</a>
-  </p>
+  <h2>Research Overview</h2>
+  <p class="small">Four integrated research pillars</p>
+
+  <div class="hero" style="margin-top:14px;">
+    <img src="assets/hero.png" alt="Research overview figure">
+    <p class="small">Research overview figure</p>
+  </div>
+
+  <div class="grid" style="margin-top:18px;">
+    <div class="card">
+      <h3>Supramolecular Photomedicine – Sustained Redox PDT</h3>
+      <p>
+        Supramolecular redox dye assemblies enabling sustained radical generation for hypoxia resilient phototherapy.
+        I design simple but powerful molecular systems for next generation photomedicine.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Emergent Photofunctional Complex Supramolecular Systems</h3>
+      <p>
+        Photofunctions emerging from complex assemblies for small molecular transformation and photocatalysis in water.
+        I explore multi step energy and electron transfer enabled by mesoscale molecular fields.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Dye Accumulation Induced Photophysical Properties for Bioimaging</h3>
+      <p>
+        Aggregation and accumulation driven photophysics in biological environments.
+        I develop high contrast probes and functional imaging strategies based on dye assemblies.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Autonomous Materials Discovery</h3>
+      <p>
+        AI assisted molecular design and robotic optimization to explore chemical space.
+        I aim to discover unknown functional systems and new governing principles.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Research Overview</h2>
+  <p class="small">Four integrated research pillars</p>
+
+  <div class="hero" style="margin-top:14px;">
+    <img src="assets/hero.png" alt="Research overview figure">
+    <p class="small">Research overview figure</p>
+  </div>
+
+  <div class="grid" style="margin-top:18px;">
+    <div class="card">
+      <h3>Supramolecular Photomedicine – Sustained Redox PDT</h3>
+      <p>
+        Supramolecular redox dye assemblies enabling sustained radical generation for hypoxia resilient phototherapy.
+        I design simple but powerful molecular systems for next generation photomedicine.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Emergent Photofunctional Complex Supramolecular Systems</h3>
+      <p>
+        Photofunctions emerging from complex assemblies for small molecular transformation and photocatalysis in water.
+        I explore multi step energy and electron transfer enabled by mesoscale molecular fields.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Dye Accumulation Induced Photophysical Properties for Bioimaging</h3>
+      <p>
+        Aggregation and accumulation driven photophysics in biological environments.
+        I develop high contrast probes and functional imaging strategies based on dye assemblies.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Autonomous Materials Discovery</h3>
+      <p>
+        AI assisted molecular design and robotic optimization to explore chemical space.
+        I aim to discover unknown functional systems and new governing principles.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="wrap">
