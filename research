@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research | Shigemitsu Lab</title>
+<meta name="description" content="Research pillars of Shigemitsu Lab at NIMS.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#0b0d10;--panel:#12151b;--text:#f2f2f2;--muted:#9aa3ad;--line:#222;--accent:#d4af37;--max:980px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.75}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.topbar{border-bottom:1px solid var(--line);background:rgba(11,13,16,0.85);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.brand{line-height:1.2}
+.brand .title{font-weight:700;letter-spacing:0.4px}
+.brand .sub{color:var(--muted);font-size:12px;margin-top:4px}
+.nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
+.nav a{color:var(--text);font-size:13px;padding:7px 10px;border:1px solid transparent;border-radius:999px}
+.nav a:hover{border-color:rgba(212,175,55,0.35);color:var(--accent);text-decoration:none}
+main{padding:46px 0 40px}
+h1{margin:0 0 10px;font-size:34px}
+.small{color:var(--muted);font-size:13px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:rgba(212,175,55,0.45)}
+.card img{width:100%;display:block;margin-bottom:12px;border-radius:6px;border:1px solid #1c1f26}
+.card h3{margin:0 0 10px;font-size:16px}
+.card p{margin:0;color:#b8c0cc;font-size:14px}
+footer{padding:28px 0 40px;color:var(--muted);border-top:1px solid var(--line);font-size:12px;margin-top:30px}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="title">Shigemitsu Lab</div>
+      <div class="sub">Principal Investigator, NIMS</div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="equipments.html">Equipments</a>
+      <a href="fundings.html">Fundings</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+  <h1>Research</h1>
+  <p class="small">Four integrated research pillars</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="assets/pdt.png" alt="Supramolecular photomedicine">
+      <h3>Supramolecular Photomedicine – Sustained Redox PDT</h3>
+      <p>Supramolecular redox dye assemblies enabling sustained radical generation for hypoxia resilient phototherapy.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/complex.png" alt="Complex supramolecular systems">
+      <h3>Emergent Photofunctional Complex Supramolecular Systems</h3>
+      <p>Photofunctions emerging from complex assemblies for small molecular transformation and photocatalysis in water.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/bio.png" alt="Bioimaging dyes">
+      <h3>Dye Accumulation Induced Photophysical Properties for Bioimaging</h3>
+      <p>Aggregation and accumulation driven photophysics in biological environments to build high contrast imaging probes.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/ai.png" alt="Autonomous discovery">
+      <h3>Autonomous Materials Discovery</h3>
+      <p>AI assisted design and robotic optimization to explore chemical space and discover unknown functional systems.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> Hajime Shigemitsu</div>
+</footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
