@@ -3,261 +3,223 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hajime Shigemitsu</title>
+<title>Hajime Shigemitsu Lab</title>
+<meta name="description" content="Hajime Shigemitsu, Principal Investigator at NIMS. Supramolecular chemistry, photomedicine, and autonomous materials discovery.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --bg:#0b0d10;
+  --panel:#12151b;
+  --text:#f2f2f2;
+  --muted:#9aa3ad;
+  --line:#222;
+  --accent:#d4af37;
+  --max:980px;
+}
+*{box-sizing:border-box}
 body{
- background:#0b0d10;
- color:#f2f2f2;
- font-family:Inter,system-ui;
- margin:0;
- text-align:center;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.75;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+.topbar{
+  border-bottom:1px solid var(--line);
+  background:rgba(11,13,16,0.85);
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(10px);
+  z-index:10;
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 0;
+}
+.brand{
+  line-height:1.2;
+}
+.brand .title{
+  font-weight:700;
+  letter-spacing:0.4px;
+}
+.brand .sub{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
+
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:10px;
+}
+.nav a{
+  color:var(--text);
+  font-size:13px;
+  padding:7px 10px;
+  border:1px solid transparent;
+  border-radius:999px;
+}
+.nav a:hover{
+  border-color:rgba(212,175,55,0.35);
+  color:var(--accent);
+  text-decoration:none;
 }
 
 header{
- padding:120px 20px 60px;
+  padding:56px 0 26px;
 }
-
-h1{font-size:52px;margin:0}
-.sub{color:#aaa;margin-top:10px}
-.tag{margin-top:20px;font-size:18px;color:#ddd}
+h1{
+  margin:0 0 10px;
+  font-size:42px;
+  letter-spacing:0.3px;
+}
+.jp{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+.lead{
+  margin:0 0 18px;
+  color:#ddd;
+  max-width:70ch;
+}
 
 .hero{
- max-width:900px;
- margin:50px auto;
+  margin:22px 0 0;
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:14px;
 }
-
 .hero img{
- width:100%;
- border-radius:0;
- border:1px solid #222;
- box-shadow:0 30px 80px rgba(0,0,0,0.7);
-}
-
-nav{
- margin-top:40px;
-}
-
-nav a{
- color:#ddd;
- margin:0 14px;
- text-decoration:none;
- font-size:18px;
+  width:100%;
+  display:block;
+  border-radius:0;
+  border:1px solid var(--line);
 }
 
 section{
- padding:80px 20px;
- border-top:1px solid #222;
- max-width:900px;
- margin:auto;
+  padding:36px 0;
+  border-top:1px solid var(--line);
 }
-
-.grid{
+h2{
+  margin:0 0 14px;
+  font-size:20px;
+  letter-spacing:0.3px;
+}
+.small{color:var(--muted); font-size:13px; margin:8px 0 0}
+.news{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
-  margin-top:28px;
-  text-align:left;
+  gap:10px;
 }
-
-.card{
-  background:#12151b;
-  border:1px solid #1c1f26;
-  border-radius:18px;
-  padding:18px 18px 16px;
-  transition:transform 0.25s, border-color 0.25s;
+.news-item{
+  padding:12px 14px;
+  border:1px solid var(--line);
+  background:rgba(18,21,27,0.65);
 }
-
-.card:hover{
-  transform:translateY(-4px);
-  border-color:#d4af37;
+.news-item .date{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:4px;
 }
-
-.card h3{
-  margin:0 0 10px;
-  font-size:18px;
-  letter-spacing:0.2px;
+footer{
+  padding:28px 0 40px;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+  font-size:12px;
 }
-
-.card p{
-  margin:0;
-  color:#b8c0cc;
-  font-size:15px;
-  line-height:1.7;
-}
-
-.small{
-  margin-top:12px;
-  color:#9aa3ad;
-  font-size:13px;
-}
-
-.card img{
-  width:100%;
-  display:block;
-  margin-bottom:12px;
-  border-radius:6px;
-  border:1px solid #1c1f26;
-}
-
 </style>
- 
- 
 </head>
 
 <body>
 
-<header>
-<h1>Hajime Shigemitsu</h1>
-<div class="sub">Principal Investigator, NIMS</div>
-<div class="tag">Supramolecular chemistry × Photomedicine × Autonomous discovery</div>
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="title">Shigemitsu Lab</div>
+      <div class="sub">Principal Investigator, NIMS</div>
+    </div>
 
-<div class="hero">
-<img src="hero.png">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="equipments.html">Equipments</a>
+      <a href="fundings.html">Fundings</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </div>
 </div>
 
-<nav>
-<a href="#research">Research</a>
-<a href="#publications">Publications</a>
-<a href="#grants">Grants</a>
-<a href="#collaborators">Collaborators</a>
-<a href="#contact">Contact</a>
-</nav>
+<header class="wrap">
+  <h1>Hajime Shigemitsu</h1>
+  <p class="jp">重光 孟（物質・材料研究機構 NIMS）</p>
+  <p class="lead">
+    Integrating supramolecular chemistry, photomedicine, and autonomous materials discovery.
+  </p>
+
+  <div class="hero">
+    <img src="assets/hero.png" alt="Research overview figure">
+    <p class="small">Research overview figure</p>
+  </div>
 </header>
 
-<section id="research">
-  <h2>Research</h2>
-  <p class="small">Four integrated research pillars</p>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="dye.png" alt="Supramolecular photomedicine">
-      <h3>Supramolecular Photomedicine – Sustained Redox PDT</h3>
-      <p>
-        Development of next generation supramolecular photodynamic therapy 
-        capable of functioning under hypoxic tumor environments.
-        Redox active dye assemblies enable catalytic and sustained radical generation 
-        for advanced molecular photomedicine.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="dye.png" alt="Complex supramolecular systems">
-      <h3>Emergent Photofunctional Complex Supramolecular Systems</h3>
-      <p>
-        Exploration of collective photofunctions emerging from complex molecular assemblies.
-        These systems enable small molecular transformations, photocatalysis,
-        and multi step energy and electron transfer in water.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="dye.png" alt="Bioimaging dyes">
-      <h3>Dye Accumulation Induced Photophysical Properties for Bioimaging</h3>
-      <p>
-        Investigation of photophysical properties arising from dye accumulation and 
-        supramolecular aggregation in biological environments.
-        Development of high contrast imaging and functional optical probes.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="dye.png" alt="Autonomous discovery">
-      <h3>Autonomous Materials Discovery</h3>
-      <p>
-        Integration of molecular design, robotics, and AI assisted optimization 
-        for exploration of complex chemical space.
-        Discovery of unknown functional systems and governing principles.
-      </p>
-    </div>
-
-  </div>
+<section class="wrap">
+  <h2>About</h2>
+  <p>
+    The Shigemitsu Lab develops functional molecular systems by integrating supramolecular design,
+    photochemistry, and data driven discovery.
+  </p>
+  <p class="small">
+    Profiles: <a href="https://scholar.google.com/citations?user=aX5nu74AAAAJ&hl=ja" target="_blank" rel="noopener">Google Scholar</a>
+    · <a href="https://orcid.org/0000-0002-3104-049X" target="_blank" rel="noopener">ORCID</a>
+  </p>
 </section>
 
-<section id="publications">
-<h2>Selected Publications</h2>
-
-<p>
-<a href="https://scholar.google.com/citations?user=aX5nu74AAAAJ&hl=ja" target="_blank">
-Google Scholar → Full list
-</a>
-</p>
-
-<div class="grid">
-
-<div class="card">
-<strong>Supramolecular redox photodynamic therapy</strong>
-<p class="small">Nature Communications (under consideration)</p>
-</div>
-
-<div class="card">
-<strong>Chiral supramolecular CPL systems</strong>
-<p class="small">Angewandte Chemie</p>
-</div>
-
-<div class="card">
-<strong>Autonomous supramolecular photocatalysts</strong>
-<p class="small">JACS Au</p>
-</div>
-
-</div>
-</section>
-
-<section id="grants">
-<h2>Grants</h2>
-
-<div class="grid">
-
-<div class="card">
-<strong>Grant-in-Aid for Transformative Research (A)</strong>
-<p class="small">2026–2028 Principal Investigator</p>
-</div>
-
-<div class="card">
-<strong>JSPS KAKENHI Young Scientists</strong>
-<p class="small">Principal Investigator</p>
-</div>
-
-<div class="card">
-<strong>Various Foundations (Takeda, AGC, etc.)</strong>
-<p class="small">Principal Investigator</p>
-</div>
-
-</div>
-</section>
-
-<section id="collaborators">
-<h2>Collaborators</h2>
-
-<div class="grid">
-
-<div class="card">
-<strong>NIMS</strong>
-<p class="small">Polymer and biomaterials research center</p>
-</div>
-
-<div class="card">
-<strong>Osaka University</strong>
-<p class="small">Supramolecular chemistry and photochemistry</p>
-</div>
-
-<div class="card">
-<strong>International Collaborations</strong>
-<p class="small">China, Europe, and global partners</p>
-</div>
-
-</div>
-</section>
-
-<section id="contact">
+<section class="wrap">
   <h2>Contact</h2>
-  <p><a href="mailto:SHIGEMITSU.Hajime@nims.go.jp">SHIGEMITSU.Hajime@nims.go.jp</a></p>
+  <p>
+    National Institute for Materials Science (NIMS), Japan<br>
+    Email: <a href="mailto:SHIGEMITSU.Hajime@nims.go.jp">SHIGEMITSU.Hajime@nims.go.jp</a>
+  </p>
 </section>
+
+<section class="wrap">
+  <h2>Latest News</h2>
+  <div class="news">
+    <div class="news-item">
+      <div class="date">2026.02.22</div>
+      <div>Website launched on GitHub Pages.</div>
+    </div>
+    <div class="news-item">
+      <div class="date">YYYY.MM.DD</div>
+      <div>Add your next update here.</div>
+    </div>
+  </div>
+  <p class="small">Tip: keep news short, date first, link when needed.</p>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> Hajime Shigemitsu</div>
+</footer>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
