@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Publications | Hajime Shigemitsu</title>
-<meta name="description" content="Publications of Hajime Shigemitsu.">
+<title>Contact | Hajime Shigemitsu</title>
+<meta name="description" content="Contact information for Hajime Shigemitsu, NIMS.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,20 +47,22 @@ a:hover{text-decoration:underline}
   gap:16px;
   padding:14px 0;
 }
-.brand{line-height:1.2}
-.brand .title{font-weight:700; letter-spacing:0.4px}
-.brand .sub{color:var(--muted); font-size:12px; margin-top:4px}
+.brand{ line-height:1.2; }
+.brand .title{ font-weight:700; letter-spacing:0.4px; }
+.brand .sub{ color:var(--muted); font-size:12px; margin-top:4px; }
 
 .nav{
   display:flex;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
   justify-content:flex-end;
-  gap:10px;
+  gap:8px;
+  white-space:nowrap;
+  overflow-x:auto;
 }
 .nav a{
   color:var(--text);
   font-size:13px;
-  padding:7px 10px;
+  padding:6px 8px;
   border:1px solid transparent;
   border-radius:999px;
 }
@@ -70,21 +72,34 @@ a:hover{text-decoration:underline}
   text-decoration:none;
 }
 
-header{padding:34px 0 18px}
-h1{margin:0 0 10px; font-size:28px; letter-spacing:0.2px}
+/* index.html と同じ “section リズム” */
+section{
+  padding:36px 0;
+  border-top:1px solid var(--line);
+}
+/* Contactページは最初のセクションに線を出したくないなら有効化 */
+/* section:first-of-type{ border-top:0; } */
+
+h2{
+  margin:0 0 20px;
+  font-size:30px;
+  letter-spacing:0.6px;
+  font-weight:600;
+  color:var(--text);
+  position:relative;
+  padding-bottom:6px;
+}
+
 .small{color:var(--muted); font-size:13px; margin:8px 0 0}
 
-section{padding:28px 0; border-top:1px solid var(--line)}
-h2{margin:0 0 14px; font-size:20px; letter-spacing:0.3px}
-
-.list{display:grid; gap:10px; margin-top:12px}
-.item{
-  padding:12px 14px;
+/* Contact本文の枠（indexのindexカードに合わせた雰囲気） */
+.contact-box{
+  margin-top:14px;
+  background:var(--panel);
   border:1px solid var(--line);
-  background:rgba(18,21,27,0.65);
+  padding:18px;
+  line-height:1.9;
 }
-.item strong{display:block; font-weight:600}
-.item span{display:block; color:#b8c0cc; font-size:13px; margin-top:6px}
 
 footer{
   padding:28px 0 40px;
@@ -107,12 +122,14 @@ footer{
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
-      <a href="team.html">Team</a>
       <a href="publications.html">Publications</a>
-      <a href="presentations.html">Presentations</a>
-      <a href="equipments.html">Equipments</a>
-      <a href="fundings.html">Fundings</a>
-      <a href="events.html">Events</a>
+      <a href="team.html">Team</a>
+      <a href="grants.html">Grants</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="collaborators.html">Collaborators</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </div>
