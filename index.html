@@ -117,9 +117,23 @@ section{
   border-top:1px solid var(--line);
 }
 h2{
-  margin:0 0 14px;
-  font-size:20px;
-  letter-spacing:0.3px;
+  margin:0 0 20px;
+  font-size:30px;
+  letter-spacing:0.6px;
+  font-weight:600;
+  color:var(--text);
+  position:relative;
+  padding-bottom:6px;
+}
+
+h2::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:40px;
+  height:2px;
+  background:var(--accent);
 }
 .small{color:var(--muted); font-size:13px; margin:8px 0 0}
 .news{
