@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact | Hajime Shigemitsu</title>
-<meta name="description" content="Contact information for Hajime Shigemitsu, NIMS.">
+<title>Research | Hajime Shigemitsu</title>
+<meta name="description" content="Research of Hajime Shigemitsu at NIMS. Supramolecular photofunctional systems for energy, medicine, and bioimaging.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,9 +47,18 @@ a:hover{text-decoration:underline}
   gap:16px;
   padding:14px 0;
 }
-.brand{ line-height:1.2; }
-.brand .title{ font-weight:700; letter-spacing:0.4px; }
-.brand .sub{ color:var(--muted); font-size:12px; margin-top:4px; }
+.brand{
+  line-height:1.2;
+}
+.brand .title{
+  font-weight:700;
+  letter-spacing:0.4px;
+}
+.brand .sub{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
 
 .nav{
   display:flex;
@@ -72,14 +81,10 @@ a:hover{text-decoration:underline}
   text-decoration:none;
 }
 
-/* index.html と同じ “section リズム” */
 section{
   padding:36px 0;
   border-top:1px solid var(--line);
 }
-/* Contactページは最初のセクションに線を出したくないなら有効化 */
-/* section:first-of-type{ border-top:0; } */
-
 h2{
   margin:0 0 20px;
   font-size:30px;
@@ -92,14 +97,54 @@ h2{
 
 .small{color:var(--muted); font-size:13px; margin:8px 0 0}
 
-/* Contact本文の枠（indexのindexカードに合わせた雰囲気） */
-.contact-box{
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  margin-top:18px;
+  text-align:left;
+}
+.card{
+  background:#12151b;
+  border:1px solid #222;
+  border-radius:18px;
+  padding:16px;
+  transition:transform .2s,border-color .2s;
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(212,175,55,0.45);
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:16px;
+}
+.card p{
+  margin:0;
+  color:#b8c0cc;
+  font-size:14px;
+}
+
+/* index.html と同じ “枠” を汎用化 */
+.panel{
   margin-top:14px;
   background:var(--panel);
   border:1px solid var(--line);
   padding:18px;
-  line-height:1.9;
 }
+
+.figure img{
+  width:100%;
+  display:block;
+  border:1px solid var(--line);
+}
+
+.list{
+  margin:10px 0 0;
+  padding-left:18px;
+  color:#cfd6df;
+}
+.list li{ margin:6px 0; }
 
 footer{
   padding:28px 0 40px;
@@ -134,41 +179,89 @@ footer{
   </div>
 </div>
 
-<main class="wrap">
-  <h1>Research</h1>
-  <p>- Supramolecular photochemistry and functional molecular systems<br>- Artificial photosynthesis, photomedicine, and bioimaging<br>- Autonomous materials discovery and AI-assisted complex systems chemistry 
-  <p class="small">Four integrated research pillars</p>
+<section class="wrap">
+  <h2>Research</h2>
+  <div class="panel">
+    <p style="margin:0;">
+      We create photofunctional molecular systems by integrating supramolecular design, photochemistry, and autonomous discovery.
+      Our core interest is emergent function from assemblies, including charge separation, long lived reactive states, and chiral photophysics, with applications to photomedicine, energy conversion, and bioimaging.
+    </p>
+  </div>
+</section>
 
-  <div class="grid">
-    <div class="card">
-      <img src="dye.png" alt="Supramolecular photomedicine">
-      <h3>Supramolecular Photomedicine – Sustained Redox PDT</h3>
-      <p>Supramolecular redox dye assemblies enabling sustained radical generation for hypoxia resilient phototherapy.</p>
-    </div>
+<section class="wrap">
+  <h2>Research Overview</h2>
 
-    <div class="card">
-      <img src="dye.png" alt="Complex supramolecular systems">
-      <h3>Emergent Photofunctional Complex Supramolecular Systems</h3>
-      <p>Photofunctions emerging from complex assemblies for small molecular transformation and photocatalysis in water.</p>
-    </div>
+  <!-- index.html と同じ “枠付き図” -->
+  <div class="panel figure">
+    <!-- index.png を流用するならこのままでOK -->
+    <img src="index.png" alt="Research overview figure">
+    <p class="small" style="margin:10px 0 0;">Research overview figure</p>
+  </div>
 
-    <div class="card">
-      <img src="dye.png" alt="Bioimaging dyes">
-      <h3>Dye Accumulation Induced Photophysical Properties for Bioimaging</h3>
-      <p>Aggregation and accumulation driven photophysics in biological environments to build high contrast imaging probes.</p>
-    </div>
+  <!-- 4 pillars を “枠の中” で見せる -->
+  <div class="panel" style="margin-top:18px;">
+    <p class="small" style="margin:0 0 10px;">Four integrated research pillars</p>
 
-    <div class="card">
-      <img src="dye.png" alt="Autonomous discovery">
-      <h3>Autonomous Materials Discovery</h3>
-      <p>AI assisted design and robotic optimization to explore chemical space and discover unknown functional systems.</p>
+    <div class="grid" style="margin-top:12px;">
+      <div class="card">
+        <h3>Supramolecular Photomedicine: Sustained Redox PDT</h3>
+        <p>
+          Supramolecular redox dye assemblies that enable sustained radical generation under low oxygen conditions.
+          We aim to establish a new phototherapy concept by combining controllable self assembly with mechanistic photochemistry.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Emergent Photofunctional Supramolecular Systems</h3>
+        <p>
+          Photofunctions that emerge from complex assemblies in water for small molecule transformation and photocatalysis.
+          We explore multi step energy and electron transfer enabled by mesoscale molecular fields.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Dye Assembly Photophysics for Bioimaging</h3>
+        <p>
+          Accumulation driven photophysics in biological environments.
+          We develop high contrast probes and functional imaging strategies based on controllable dye assemblies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Autonomous Materials Discovery</h3>
+        <p>
+          AI assisted molecular design and robotic optimization to explore chemical space.
+          We aim to discover unknown functional systems and new governing principles.
+        </p>
+      </div>
     </div>
   </div>
-</main>
+</section>
+
+<section class="wrap">
+  <h2>Key Concepts</h2>
+  <div class="panel">
+    <ul class="list">
+      <li>Emergent photofunctions from molecular assemblies in water</li>
+      <li>Controllable charge separation and long lived reactive excited states</li>
+      <li>Supramolecular control of redox cycles for sustained photochemistry</li>
+      <li>Chiral photophysics including CD and CPL from non chiral dyes via assembly</li>
+      <li>Autonomous exploration of design rules with AI and robotics</li>
+    </ul>
+    <p class="small" style="margin:12px 0 0;">
+      If you would like to collaborate, please see the <a href="contact.html">Contact</a> page.
+    </p>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">© <span id="y"></span> Hajime Shigemitsu</div>
 </footer>
-<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
