@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hajime Shigemitsu</title>
-<meta name="description" content="Hajime Shigemitsu, Principal Investigator at NIMS. Supramolecular chemistry, photomedicine, and autonomous materials discovery.">
+<title>Contact | Hajime Shigemitsu</title>
+<meta name="description" content="Contact information for Hajime Shigemitsu, NIMS.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,18 +47,9 @@ a:hover{text-decoration:underline}
   gap:16px;
   padding:14px 0;
 }
-.brand{
-  line-height:1.2;
-}
-.brand .title{
-  font-weight:700;
-  letter-spacing:0.4px;
-}
-.brand .sub{
-  color:var(--muted);
-  font-size:12px;
-  margin-top:4px;
-}
+.brand{ line-height:1.2; }
+.brand .title{ font-weight:700; letter-spacing:0.4px; }
+.brand .sub{ color:var(--muted); font-size:12px; margin-top:4px; }
 
 .nav{
   display:flex;
@@ -81,41 +72,14 @@ a:hover{text-decoration:underline}
   text-decoration:none;
 }
 
-header{
-  padding:56px 0 26px;
-}
-h1{
-  margin:0 0 10px;
-  font-size:42px;
-  letter-spacing:0.3px;
-}
-.jp{
-  margin:0 0 18px;
-  color:var(--muted);
-}
-.lead{
-  margin:0 0 18px;
-  color:#ddd;
-  max-width:70ch;
-}
-
-.index{
-  margin:22px 0 0;
-  background:var(--panel);
-  border:1px solid var(--line);
-  padding:14px;
-}
-.index img{
-  width:100%;
-  display:block;
-  border-radius:0;
-  border:1px solid var(--line);
-}
-
+/* index.html と同じ “section リズム” */
 section{
   padding:36px 0;
   border-top:1px solid var(--line);
 }
+/* Contactページは最初のセクションに線を出したくないなら有効化 */
+/* section:first-of-type{ border-top:0; } */
+
 h2{
   margin:0 0 20px;
   font-size:30px;
@@ -125,49 +89,18 @@ h2{
   position:relative;
   padding-bottom:6px;
 }
+
 .small{color:var(--muted); font-size:13px; margin:8px 0 0}
-.news{
-  display:grid;
-  gap:10px;
-}
-.news-item{
-  padding:12px 14px;
+
+/* Contact本文の枠（indexのindexカードに合わせた雰囲気） */
+.contact-box{
+  margin-top:14px;
+  background:var(--panel);
   border:1px solid var(--line);
-  background:rgba(18,21,27,0.65);
+  padding:18px;
+  line-height:1.9;
 }
-.news-item .date{
-  color:var(--muted);
-  font-size:12px;
-  margin-bottom:4px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:16px;
-  margin-top:18px;
-  text-align:left;
-}
-.card{
-  background:#12151b;
-  border:1px solid #222;
-  border-radius:18px;
-  padding:16px;
-  transition:transform .2s,border-color .2s;
-}
-.card:hover{
-  transform:translateY(-3px);
-  border-color:rgba(212,175,55,0.45);
-}
-.card h3{
-  margin:0 0 10px;
-  font-size:16px;
-}
-.card p{
-  margin:0;
-  color:#b8c0cc;
-  font-size:14px;
-}
-  
+
 footer{
   padding:28px 0 40px;
   color:var(--muted);
@@ -198,31 +131,31 @@ footer{
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
     </nav>
-
   </div>
 </div>
 
 <section class="wrap">
-<h1>Contact</h1>
+  <h2>Contact</h2>
 
-<div class="contact-box">
-<b>Hajime Shigemitsu, Ph.D.</b><br>
-Autonomous Polymer Design and Discovery Group<br>
-Research Center for Macromolecules and Biomaterials<br>
-National Institute for Materials Science (NIMS)<br><br>
+  <div class="contact-box">
+    <div><b>Hajime Shigemitsu, Ph.D.</b></div>
+    <div>Autonomous Polymer Design and Discovery Group</div>
+    <div>Research Center for Macromolecules and Biomaterials</div>
+    <div>National Institute for Materials Science (NIMS)</div>
+    <br>
 
-Room 302, Central Building<br>
-1-2-1 Sengen<br>
-Tsukuba, Ibaraki, 305-0047 Japan<br><br>
+    <div>Room 302, Central Building</div>
+    <div>1-2-1 Sengen</div>
+    <div>Tsukuba, Ibaraki, 305-0047 Japan</div>
+    <br>
 
-<span class="label">Tel:</span> +81-29-859-2107<br> <span class="label">E-mail:</span> <a href="mailto:SHIGEMITSU.Hajime@nims.go.jp">SHIGEMITSU.Hajime@nims.go.jp</a>
-
-</div>
-
+    <div><span class="small">Tel:</span> +81-29-859-2107</div>
+    <div><span class="small">E-mail:</span> <a href="mailto:SHIGEMITSU.Hajime@nims.go.jp">SHIGEMITSU.Hajime@nims.go.jp</a></div>
+  </div>
 </section>
 
 <footer>
-<div class="wrap">© <span id="y"></span> Hajime Shigemitsu</div>
+  <div class="wrap">© <span id="y"></span> Hajime Shigemitsu</div>
 </footer>
 
 <script>
