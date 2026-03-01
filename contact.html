@@ -1,11 +1,10 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact | Hajime Shigemitsu</title>
-<meta name="description" content="Contact information for Hajime Shigemitsu, NIMS.">
+<title>Hajime Shigemitsu</title>
+<meta name="description" content="Hajime Shigemitsu, Principal Investigator at NIMS. Supramolecular chemistry, photomedicine, and autonomous materials discovery.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,50 +47,134 @@ a:hover{text-decoration:underline}
   gap:16px;
   padding:14px 0;
 }
-.brand .title{font-weight:700}
-.brand .sub{color:var(--muted); font-size:12px; margin-top:4px}
+.brand{
+  line-height:1.2;
+}
+.brand .title{
+  font-weight:700;
+  letter-spacing:0.4px;
+}
+.brand .sub{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
 
 .nav{
   display:flex;
+  flex-wrap:nowrap;
+  justify-content:flex-end;
   gap:8px;
   white-space:nowrap;
+  overflow-x:auto;
 }
 .nav a{
   color:var(--text);
   font-size:13px;
   padding:6px 8px;
+  border:1px solid transparent;
   border-radius:999px;
 }
 .nav a:hover{
+  border-color:rgba(212,175,55,0.35);
   color:var(--accent);
+  text-decoration:none;
+}
+
+header{
+  padding:56px 0 26px;
+}
+h1{
+  margin:0 0 10px;
+  font-size:42px;
+  letter-spacing:0.3px;
+}
+.jp{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+.lead{
+  margin:0 0 18px;
+  color:#ddd;
+  max-width:70ch;
+}
+
+.index{
+  margin:22px 0 0;
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:14px;
+}
+.index img{
+  width:100%;
+  display:block;
+  border-radius:0;
+  border:1px solid var(--line);
 }
 
 section{
-  padding:60px 0;
+  padding:36px 0;
+  border-top:1px solid var(--line);
 }
-h1{
-  font-size:36px;
-  margin:0 0 30px;
+h2{
+  margin:0 0 20px;
+  font-size:30px;
+  letter-spacing:0.6px;
+  font-weight:600;
+  color:var(--text);
+  position:relative;
+  padding-bottom:6px;
 }
-.contact-box{
-  background:var(--panel);
+.small{color:var(--muted); font-size:13px; margin:8px 0 0}
+.news{
+  display:grid;
+  gap:10px;
+}
+.news-item{
+  padding:12px 14px;
   border:1px solid var(--line);
-  padding:28px;
-  line-height:1.9;
+  background:rgba(18,21,27,0.65);
+}
+.news-item .date{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:4px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  margin-top:18px;
+  text-align:left;
+}
+.card{
+  background:#12151b;
+  border:1px solid #222;
+  border-radius:18px;
+  padding:16px;
+  transition:transform .2s,border-color .2s;
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(212,175,55,0.45);
+}
+.card h3{
+  margin:0 0 10px;
   font-size:16px;
 }
-.label{
-  color:var(--muted);
+.card p{
+  margin:0;
+  color:#b8c0cc;
+  font-size:14px;
 }
+  
 footer{
-  padding:40px 0;
+  padding:28px 0 40px;
   color:var(--muted);
   border-top:1px solid var(--line);
   font-size:12px;
-  margin-top:60px;
 }
 </style>
-
 </head>
 
 <body>
@@ -103,18 +186,18 @@ footer{
       <div class="sub">Principal Investigator, NIMS</div>
     </div>
 
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="team.html">Team</a>
-  <a href="grants.html">Grants</a>
-  <a href="facilities.html">Facilities</a>
-  <a href="philosophy.html">Philosophy</a>
-  <a href="collaborators.html">Collaborators</a>
-  <a href="news.html">News</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="team.html">Team</a>
+      <a href="grants.html">Grants</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="collaborators.html">Collaborators</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
   </div>
 </div>
